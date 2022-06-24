@@ -1,0 +1,10 @@
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\bin\Debug\nmap2.exe.config
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\bin\Debug\nmap2.exe
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\bin\Debug\nmap2.pdb
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.csproj.AssemblyReference.cache
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.Form1.resources
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.Properties.Resources.resources
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.csproj.GenerateResource.cache
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.csproj.CoreCompileInputs.cache
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.exe
+C:\Users\AHMET\Desktop\C# PROJELERİ\nmap2\nmap2\obj\Debug\nmap2.pdb
