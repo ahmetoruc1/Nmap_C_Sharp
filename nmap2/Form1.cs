@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Threading;
+using System.Net.Sockets;
+using System.Collections;
 
 namespace nmap2
 {
@@ -22,35 +24,46 @@ namespace nmap2
 
         }
         Thread thread = null;
+        Thread thread2 = null;
         //Thread in çalışması için Threading kütüphanesini projeye import ediyoruz.
-        
 
-        public void scan(string subnet)
+
+        void scan2(string subnet,string subnetn)
         {
             Ping ping;
             PingReply reply;
-            
-            for (int i = 1; i < 255; i++)
-            {
-                
-                string subnetn = "." + i.ToString();
-                ping = new Ping();
-                reply = ping.Send(subnet+subnetn, 100);
+            ping = new Ping();
+            reply = ping.Send(subnet + subnetn);
 
-                if (reply.Status==IPStatus.Success)
+                if (reply.Status == IPStatus.Success)
                 {
                     try
                     {
-                        textBoxHOST.AppendText(subnet + subnetn +Environment.NewLine);
+                    textBoxHOST.AppendText(subnet + subnetn +  Environment.NewLine);
+
                     }
                     catch (Exception hata)
                     {
-                        MessageBox.Show(hata.Message,"Threadde Hata!");
+                    MessageBox.Show(hata.Message, "Threadde Hata!");
                     }
-                }
-            }
-        }
 
+                }
+           
+        }       
+
+        public void scan(string subnet)
+        {
+
+            for (int i = 1; i < 255; i++)
+            {
+                string subnetn = "." + i.ToString();
+                thread2 = new Thread(() => scan2(subnet, subnetn));
+                thread2.Start();
+            }
+            MessageBox.Show("IP Tarama İşlemi Sona Erdi");
+
+        }
+        
         private void buttonoku_Click(object sender, EventArgs e)
         {
             thread = new Thread(()=>scan(textBoxIP.Text));
@@ -59,16 +72,10 @@ namespace nmap2
             if (thread.IsAlive)
             {
                 buttonoku.Enabled = false;
-                buttonDUR.Enabled = true;
                 textBoxIP.Enabled = false;
             }
         }
-        private void buttonDUR_Click(object sender, EventArgs e)
-        {
-            thread.Suspend();
-            buttonDUR.Enabled = false;
-            buttonoku.Enabled = true;
-            textBoxIP.Enabled = true;
-        }
+       
     }
 }
+

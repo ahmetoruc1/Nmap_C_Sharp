@@ -32,7 +32,6 @@ namespace nmap2
             this.textBoxIP = new System.Windows.Forms.TextBox();
             this.textBoxHOST = new System.Windows.Forms.TextBox();
             this.buttonoku = new System.Windows.Forms.Button();
-            this.buttonDUR = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBoxIP
@@ -60,22 +59,11 @@ namespace nmap2
             this.buttonoku.UseVisualStyleBackColor = true;
             this.buttonoku.Click += new System.EventHandler(this.buttonoku_Click);
             // 
-            // buttonDUR
-            // 
-            this.buttonDUR.Location = new System.Drawing.Point(295, 31);
-            this.buttonDUR.Name = "buttonDUR";
-            this.buttonDUR.Size = new System.Drawing.Size(91, 35);
-            this.buttonDUR.TabIndex = 1;
-            this.buttonDUR.Text = "DUR";
-            this.buttonDUR.UseVisualStyleBackColor = true;
-            this.buttonDUR.Click += new System.EventHandler(this.buttonDUR_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 350);
-            this.Controls.Add(this.buttonDUR);
             this.Controls.Add(this.buttonoku);
             this.Controls.Add(this.textBoxHOST);
             this.Controls.Add(this.textBoxIP);
@@ -91,7 +79,6 @@ namespace nmap2
         private System.Windows.Forms.TextBox textBoxIP;
         private System.Windows.Forms.TextBox textBoxHOST;
         private System.Windows.Forms.Button buttonoku;
-        private System.Windows.Forms.Button buttonDUR;
     }
 }
 
